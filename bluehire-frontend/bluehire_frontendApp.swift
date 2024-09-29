@@ -11,7 +11,9 @@ import SwiftUI
 struct bluehire_frontendApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                RootView()
+            }
         }
     }
 }

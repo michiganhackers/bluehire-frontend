@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC01DA9A2CA7A29A00B307D5 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA992CA7A29300B307D5 /* HomePage.swift */; };
+		AC01DA9D2CA7A32900B307D5 /* CompanyTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA9C2CA7A32900B307D5 /* CompanyTrackerView.swift */; };
+		AC01DAA02CA7BFE800B307D5 /* BottomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA9F2CA7BFE800B307D5 /* BottomNavBar.swift */; };
+		AC01DAA22CA7C7E000B307D5 /* CompanyTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DAA12CA7C7E000B307D5 /* CompanyTrackerViewModel.swift */; };
+		AC01DAA62CA7C80300B307D5 /* CompanyTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DAA52CA7C80300B307D5 /* CompanyTracker.swift */; };
 		AC6137252C93A6CD0040A617 /* bluehire_frontendApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6137242C93A6CD0040A617 /* bluehire_frontendApp.swift */; };
-		AC6137272C93A6CD0040A617 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6137262C93A6CD0040A617 /* ContentView.swift */; };
+		AC6137272C93A6CD0040A617 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6137262C93A6CD0040A617 /* RootView.swift */; };
 		AC6137292C93A6CF0040A617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6137282C93A6CF0040A617 /* Assets.xcassets */; };
 		AC61372C2C93A6CF0040A617 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC61372B2C93A6CF0040A617 /* Preview Assets.xcassets */; };
 		AC6137362C93A6CF0040A617 /* bluehire_frontendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6137352C93A6CF0040A617 /* bluehire_frontendTests.swift */; };
@@ -34,9 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC01DA992CA7A29300B307D5 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		AC01DA9C2CA7A32900B307D5 /* CompanyTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTrackerView.swift; sourceTree = "<group>"; };
+		AC01DA9F2CA7BFE800B307D5 /* BottomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavBar.swift; sourceTree = "<group>"; };
+		AC01DAA12CA7C7E000B307D5 /* CompanyTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTrackerViewModel.swift; sourceTree = "<group>"; };
+		AC01DAA52CA7C80300B307D5 /* CompanyTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTracker.swift; sourceTree = "<group>"; };
 		AC6137212C93A6CD0040A617 /* bluehire-frontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bluehire-frontend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6137242C93A6CD0040A617 /* bluehire_frontendApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluehire_frontendApp.swift; sourceTree = "<group>"; };
-		AC6137262C93A6CD0040A617 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AC6137262C93A6CD0040A617 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		AC6137282C93A6CF0040A617 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC61372B2C93A6CF0040A617 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC6137312C93A6CF0040A617 /* bluehire-frontendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bluehire-frontendTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,25 +81,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AC4CF8652C93B2E8005BA5E4 /* views */ = {
+		AC0BC74A2C96317B005E936D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AC4CF8672C93B2FC005BA5E4 /* ViewModels */,
+				AC4CF8662C93B2F3005BA5E4 /* Models */,
+				AC4CF8652C93B2E8005BA5E4 /* Views */,
+				AC01DA9F2CA7BFE800B307D5 /* BottomNavBar.swift */,
 			);
-			path = views;
+			path = Core;
 			sourceTree = "<group>";
 		};
-		AC4CF8662C93B2F3005BA5E4 /* model */ = {
+		AC4CF8652C93B2E8005BA5E4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC01DA992CA7A29300B307D5 /* HomePage.swift */,
+				AC01DA9C2CA7A32900B307D5 /* CompanyTrackerView.swift */,
 			);
-			path = model;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		AC4CF8672C93B2FC005BA5E4 /* viewModel */ = {
+		AC4CF8662C93B2F3005BA5E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AC01DAA52CA7C80300B307D5 /* CompanyTracker.swift */,
 			);
-			path = viewModel;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC4CF8672C93B2FC005BA5E4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AC01DAA12CA7C7E000B307D5 /* CompanyTrackerViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		AC6137182C93A6CC0040A617 = {
@@ -115,12 +140,10 @@
 		AC6137232C93A6CD0040A617 /* bluehire-frontend */ = {
 			isa = PBXGroup;
 			children = (
+				AC0BC74A2C96317B005E936D /* Core */,
 				AC6137242C93A6CD0040A617 /* bluehire_frontendApp.swift */,
-				AC6137262C93A6CD0040A617 /* ContentView.swift */,
+				AC6137262C93A6CD0040A617 /* RootView.swift */,
 				AC6137282C93A6CF0040A617 /* Assets.xcassets */,
-				AC4CF8672C93B2FC005BA5E4 /* viewModel */,
-				AC4CF8662C93B2F3005BA5E4 /* model */,
-				AC4CF8652C93B2E8005BA5E4 /* views */,
 				AC61372A2C93A6CF0040A617 /* Preview Content */,
 			);
 			path = "bluehire-frontend";
@@ -215,7 +238,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					AC6137202C93A6CD0040A617 = {
 						CreatedOnToolsVersion = 15.4;
@@ -281,7 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC6137272C93A6CD0040A617 /* ContentView.swift in Sources */,
+				AC6137272C93A6CD0040A617 /* RootView.swift in Sources */,
+				AC01DAA22CA7C7E000B307D5 /* CompanyTrackerViewModel.swift in Sources */,
+				AC01DA9D2CA7A32900B307D5 /* CompanyTrackerView.swift in Sources */,
+				AC01DAA02CA7BFE800B307D5 /* BottomNavBar.swift in Sources */,
+				AC01DA9A2CA7A29A00B307D5 /* HomePage.swift in Sources */,
+				AC01DAA62CA7C80300B307D5 /* CompanyTracker.swift in Sources */,
 				AC6137252C93A6CD0040A617 /* bluehire_frontendApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,7 +527,6 @@
 		AC6137492C93A6CF0040A617 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -519,7 +546,6 @@
 		AC61374A2C93A6CF0040A617 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -539,7 +565,6 @@
 		AC61374C2C93A6CF0040A617 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UJJ249DMTZ;
@@ -557,7 +582,6 @@
 		AC61374D2C93A6CF0040A617 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UJJ249DMTZ;
