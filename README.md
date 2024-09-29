@@ -11,8 +11,7 @@
     - `Homepage ViewModel`
     - `Homepage Model`
 
-
-### 2. Checkout & Pull Latest Code
+### 2. Checkout & Pull Latest Code (git operations can be done in Xcode GUI alternatively)
 - Switch to the `main` branch and pull the latest changes:
   ```bash
   git checkout main
@@ -28,3 +27,12 @@
   ```bash
   git pull origin main
 
+## Code style
+### 1. Use camelCase for naming 
+- For example,
+  ```bash
+  var myCustomButton: UIButton
+  func fetchUserData()
+
+### 2. Reusable Components
+- For example, if Navbar is used across multiple pages, extract it in a separate file and use any existing one
