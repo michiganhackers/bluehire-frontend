@@ -9,34 +9,44 @@ import SwiftUI
 
 struct CompanyTrackerView: View {
     let primaryColor = Color("AppPrimaryColor")
-    let names = ["Microsoft", "Netflix", "Amazon", "Databricks"]
+
+    @StateObject private var vm = CompanyViewModel()
+    
     @State private var searchText = ""
     
     var body: some View {
         ZStack {
-            Image("BackgroundImage")
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-            VStack {
-                header
-                Divider()
-                    .background(Color.black)
-                filter
-                searchBar
-                
-                Spacer()
-                index
-                BottomNavBar()
+            if vm.isLoading {
+                Text("Loading...")
+                    .font(.headline)
+            } else if let errorMessage = vm.errorMessage {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+            } else if !vm.companies.isEmpty {
+                // body view
+                Image("BackgroundImage")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
+                    header
+                    Divider()
+                        .background(Color.black)
+                    filter
+                    searchBar
+                    
+                    Spacer()
+                    index
+                    BottomNavBar()
+                }
             }
         }
     }
     
-    
     // MARK: - Components
     var header: some View {
         VStack {
-            Text("Companies Applied")
+            Text("Companies Bookmarked")
             Text("Date")
         }
     }
@@ -44,11 +54,11 @@ struct CompanyTrackerView: View {
     var searchBar: some View {
         NavigationStack {
             List {
-                ForEach(searchResults, id: \.self) { name in
+                ForEach(searchResults) { company in
                     NavigationLink {
-                        Text(name)
+                        Text(company.name)
                     } label: {
-                        Text(name)
+                        Text(company.name)
                     }
                 }
             }
@@ -65,10 +75,7 @@ struct CompanyTrackerView: View {
             Text("All |")
             Text("30+ days |")
             Text("90+ days |")
-            Button("+ Upload CSV") { }
-                .foregroundColor(.black)
-                .buttonStyle(.borderedProminent)
-                .tint(primaryColor)
+            Text("1+ year")
         }
     }
     
@@ -77,27 +84,22 @@ struct CompanyTrackerView: View {
             Text("1 2 3 4")
             Spacer()
             Button("+ Add") { }
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .buttonStyle(.borderedProminent)
-                .tint(.black)
+                .tint(primaryColor)
         }
         .padding()
     }
     
     // MARK: Helper components
-    var searchResults: [String] {  // For searchBar
+    var searchResults: [Company] {  // For searchBar
         if searchText.isEmpty {
-            return names
+            return vm.companies
         } else {
-            return names.filter { $0.contains(searchText) }
+            return vm.companies.filter { $0.name.contains(searchText) }
         }
     }
-    
-    
-    
-    
 }
-
 
 
 #Preview {
