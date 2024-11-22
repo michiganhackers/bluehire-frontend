@@ -10,6 +10,7 @@ struct FlashcardView: View {
     @State private var questions: [String] = [
         "Two Sum", "Valid Palindrome", "Valid Palindrome 2", "Longest Consecutive Sequence"
     ]
+    @State private var refreshCards = false
     
     var body: some View {
         ZStack {
@@ -30,46 +31,58 @@ struct FlashcardView: View {
                         Card(question: question)
                     }
                 }
+                .id(refreshCards)
                 
                 Spacer()
-                
-//                Button(action: undoSwipe) {
-//                    Text("Undo")
-//                        .font(.title)
-//                        .padding()
-//                        .background(Color.blue)
-//                        .foregroundColor(.white)
-//                        .cornerRadius(10)
-//                }
-//                .padding()
+                Button("Refresh") {
+                    refreshCards.toggle()
+                }
+                .buttonStyle(.borderedProminent)
+                BottomNavBar()
             }
         }
     }
-
 }
 
 struct Card: View {
     var question: String
+    // Used for dragging card
     @State private var offset = CGSize.zero
+    
+    // Used for flipping card
+    @State private var isFlipped = false
+    @State private var rectangleColor = Color.black
+    @State private var showTick = false
     
     var body: some View {
         ZStack {
             Rectangle()
                 .frame(width: 320, height: 420)
                 .cornerRadius(25)
-                .foregroundColor(.black)
+                .foregroundColor(rectangleColor)
             VStack {
-                Text(question)
+                Text(isFlipped ? "Solution" : question)
                     .font(.largeTitle)
                     .foregroundColor(.white)
                     .bold()
-                Text("Problem description goes here.")
+                Text(isFlipped ? "Problem Solution goes here" : "Problem description goes here." )
                     .foregroundColor(.white)
             }
             .padding()
             .frame(width: 320, height: 420)
+            
+            // Display the tick only when the background is orange
+            if showTick {
+                Image(systemName: "checkmark.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(.white)
+            }
+            
         }
         .offset(x: offset.width, y: offset.height)
+        // Gesture used for drag/swiping card
         .gesture(
             DragGesture()
                 .onChanged { gesture in
@@ -81,6 +94,24 @@ struct Card: View {
                     }
                 }
         )
+        // OnTap gesture used to flip card
+        .onTapGesture {
+            withAnimation(.easeInOut(duration: 0.2)) {
+                rectangleColor = .orange
+                showTick = true
+            }
+            
+            // Flip card after flashing orange
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    rectangleColor = .black
+                    showTick = false
+                }
+                withAnimation(.spring(duration: 0.5)) {
+                    isFlipped.toggle()
+                }
+            }
+        }
     }
     
     func swipeCard(width: CGFloat) {
@@ -90,7 +121,7 @@ struct Card: View {
         case 100...(400):
             offset = CGSize(width: 500, height: 0)
         default:
-            self.offset = .zero
+            offset = .zero
         }
     }
 }
