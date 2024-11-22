@@ -15,7 +15,6 @@ struct CompanyTrackerView: View {
     @State private var searchText = ""
     
     var body: some View {
-        ZStack {
             if vm.isLoading {
                 Text("Loading...")
                     .font(.headline)
@@ -24,23 +23,24 @@ struct CompanyTrackerView: View {
                     .foregroundColor(.red)
             } else if !vm.companies.isEmpty {
                 // body view
-                Image("BackgroundImage")
-                    .resizable()
-                    .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
-                VStack {
-                    header
-                    Divider()
-                        .background(Color.black)
-                    filter
-                    searchBar
-                    
-                    Spacer()
-                    index
-                    BottomNavBar()
+                ZStack {
+                    Image("BackgroundImage")
+                        .resizable()
+                        .scaledToFill()
+                        .edgesIgnoringSafeArea(.all)
+                    VStack {
+                        header
+                        Divider()
+                            .background(Color.black)
+                        filter
+                        searchBar
+                        
+                        Spacer()
+                        index
+                        BottomNavBar()
+                    }
                 }
             }
-        }
     }
     
     // MARK: - Components

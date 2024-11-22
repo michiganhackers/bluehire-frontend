@@ -11,8 +11,10 @@ struct RootView: View {
     var body: some View {
         VStack {
             HomeView()
+                .padding()
+            Spacer()
+            BottomNavBar()
         }
-        .padding()
     }
 }
 
