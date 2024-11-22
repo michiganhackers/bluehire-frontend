@@ -67,9 +67,8 @@ struct CompanyTrackerView: View {
         }
         .searchable(text: $searchText, prompt: "Search")
         .frame(maxHeight: 500)
-
     }
-        
+
     var filter: some View {
         HStack {
             Text("All |")

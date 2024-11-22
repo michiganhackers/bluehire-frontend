@@ -19,6 +19,8 @@
 		AC6137362C93A6CF0040A617 /* bluehire_frontendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6137352C93A6CF0040A617 /* bluehire_frontendTests.swift */; };
 		AC6137402C93A6CF0040A617 /* bluehire_frontendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61373F2C93A6CF0040A617 /* bluehire_frontendUITests.swift */; };
 		AC6137422C93A6CF0040A617 /* bluehire_frontendUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6137412C93A6CF0040A617 /* bluehire_frontendUITestsLaunchTests.swift */; };
+		ACD6F4442CE6D60300DA16B2 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */; };
+		ACD6F4462CE6D69700DA16B2 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD6F4452CE6D69700DA16B2 /* FlashcardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		AC61373B2C93A6CF0040A617 /* bluehire-frontendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bluehire-frontendUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC61373F2C93A6CF0040A617 /* bluehire_frontendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluehire_frontendUITests.swift; sourceTree = "<group>"; };
 		AC6137412C93A6CF0040A617 /* bluehire_frontendUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluehire_frontendUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
+		ACD6F4452CE6D69700DA16B2 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +88,10 @@
 		AC0BC74A2C96317B005E936D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				ACD6F43E2CE6D4A300DA16B2 /* Components */,
 				AC4CF8672C93B2FC005BA5E4 /* ViewModels */,
 				AC4CF8662C93B2F3005BA5E4 /* Models */,
 				AC4CF8652C93B2E8005BA5E4 /* Views */,
-				AC01DA9F2CA7BFE800B307D5 /* BottomNavBar.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -97,6 +101,7 @@
 			children = (
 				AC01DA992CA7A29300B307D5 /* HomePage.swift */,
 				AC01DA9C2CA7A32900B307D5 /* CompanyTrackerView.swift */,
+				ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AC01DAA12CA7C7E000B307D5 /* CompanyTrackerViewModel.swift */,
+				ACD6F4452CE6D69700DA16B2 /* FlashcardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -172,6 +178,14 @@
 				AC6137412C93A6CF0040A617 /* bluehire_frontendUITestsLaunchTests.swift */,
 			);
 			path = "bluehire-frontendUITests";
+			sourceTree = "<group>";
+		};
+		ACD6F43E2CE6D4A300DA16B2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AC01DA9F2CA7BFE800B307D5 /* BottomNavBar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,10 +319,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC6137272C93A6CD0040A617 /* RootView.swift in Sources */,
+				ACD6F4442CE6D60300DA16B2 /* FlashcardView.swift in Sources */,
 				AC01DAA22CA7C7E000B307D5 /* CompanyTrackerViewModel.swift in Sources */,
 				AC01DA9D2CA7A32900B307D5 /* CompanyTrackerView.swift in Sources */,
 				AC01DAA02CA7BFE800B307D5 /* BottomNavBar.swift in Sources */,
 				AC01DA9A2CA7A29A00B307D5 /* HomePage.swift in Sources */,
+				ACD6F4462CE6D69700DA16B2 /* FlashcardViewModel.swift in Sources */,
 				AC01DAA62CA7C80300B307D5 /* CompanyTracker.swift in Sources */,
 				AC6137252C93A6CD0040A617 /* bluehire_frontendApp.swift in Sources */,
 			);
