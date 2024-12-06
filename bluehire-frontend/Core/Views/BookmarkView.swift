@@ -35,9 +35,7 @@ struct BookmarkView: View {
                     filter
                     searchBar
                     
-                    Spacer()
                     index
-                    BottomNavBarView()
                 }
             }
         }

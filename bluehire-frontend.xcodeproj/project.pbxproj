@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		AC01DA9A2CA7A29A00B307D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA992CA7A29300B307D5 /* HomeView.swift */; };
 		AC01DA9D2CA7A32900B307D5 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA9C2CA7A32900B307D5 /* BookmarkView.swift */; };
-		AC01DAA02CA7BFE800B307D5 /* BottomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA9F2CA7BFE800B307D5 /* BottomNavBarView.swift */; };
+		AC01DAA02CA7BFE800B307D5 /* CoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA9F2CA7BFE800B307D5 /* CoreView.swift */; };
 		AC01DAA22CA7C7E000B307D5 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DAA12CA7C7E000B307D5 /* BookmarkViewModel.swift */; };
 		AC01DAA62CA7C80300B307D5 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DAA52CA7C80300B307D5 /* Bookmark.swift */; };
+		AC26E93A2D03875700EFB302 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26E9392D03875700EFB302 /* SearchView.swift */; };
+		AC26E93C2D03890A00EFB302 /* TodoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26E93B2D03890A00EFB302 /* TodoCardView.swift */; };
+		AC26E93E2D038A7500EFB302 /* TodoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26E93D2D038A7500EFB302 /* TodoCard.swift */; };
 		AC6137252C93A6CD0040A617 /* bluehire_frontendApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6137242C93A6CD0040A617 /* bluehire_frontendApp.swift */; };
 		AC6137272C93A6CD0040A617 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6137262C93A6CD0040A617 /* RootView.swift */; };
 		AC6137292C93A6CF0040A617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6137282C93A6CF0040A617 /* Assets.xcassets */; };
@@ -49,9 +52,12 @@
 /* Begin PBXFileReference section */
 		AC01DA992CA7A29300B307D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AC01DA9C2CA7A32900B307D5 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
-		AC01DA9F2CA7BFE800B307D5 /* BottomNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavBarView.swift; sourceTree = "<group>"; };
+		AC01DA9F2CA7BFE800B307D5 /* CoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreView.swift; sourceTree = "<group>"; };
 		AC01DAA12CA7C7E000B307D5 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
 		AC01DAA52CA7C80300B307D5 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		AC26E9392D03875700EFB302 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		AC26E93B2D03890A00EFB302 /* TodoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCardView.swift; sourceTree = "<group>"; };
+		AC26E93D2D038A7500EFB302 /* TodoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCard.swift; sourceTree = "<group>"; };
 		AC6137212C93A6CD0040A617 /* bluehire-frontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bluehire-frontend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6137242C93A6CD0040A617 /* bluehire_frontendApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluehire_frontendApp.swift; sourceTree = "<group>"; };
 		AC6137262C93A6CD0040A617 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 				AC4CF8672C93B2FC005BA5E4 /* ViewModels */,
 				AC4CF8662C93B2F3005BA5E4 /* Models */,
 				AC4CF8652C93B2E8005BA5E4 /* Views */,
+				AC01DA9F2CA7BFE800B307D5 /* CoreView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -115,6 +122,7 @@
 				AC01DA9C2CA7A32900B307D5 /* BookmarkView.swift */,
 				ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */,
 				ACFA40A52CF0D46C00E05223 /* CompanyView.swift */,
+				AC26E9392D03875700EFB302 /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 				AC62454D2D02814700448A7E /* lcCard.swift */,
 				AC62454F2D0285DD00448A7E /* ReviewCard.swift */,
 				AC6245512D02D57900448A7E /* Flashcard.swift */,
+				AC26E93D2D038A7500EFB302 /* TodoCard.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,9 +208,9 @@
 		ACD6F43E2CE6D4A300DA16B2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				AC01DA9F2CA7BFE800B307D5 /* BottomNavBarView.swift */,
 				AC6245492D02801300448A7E /* ReviewCardView.swift */,
 				AC62454B2D0280F900448A7E /* IcCardView.swift */,
+				AC26E93B2D03890A00EFB302 /* TodoCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -339,16 +348,19 @@
 				AC62454C2D0280F900448A7E /* IcCardView.swift in Sources */,
 				AC6137272C93A6CD0040A617 /* RootView.swift in Sources */,
 				ACD6F4442CE6D60300DA16B2 /* FlashcardView.swift in Sources */,
+				AC26E93E2D038A7500EFB302 /* TodoCard.swift in Sources */,
 				AC01DAA22CA7C7E000B307D5 /* BookmarkViewModel.swift in Sources */,
 				AC62454E2D02814700448A7E /* lcCard.swift in Sources */,
 				AC01DA9D2CA7A32900B307D5 /* BookmarkView.swift in Sources */,
 				AC6245522D02D57900448A7E /* Flashcard.swift in Sources */,
 				AC62454A2D02801300448A7E /* ReviewCardView.swift in Sources */,
-				AC01DAA02CA7BFE800B307D5 /* BottomNavBarView.swift in Sources */,
+				AC01DAA02CA7BFE800B307D5 /* CoreView.swift in Sources */,
 				AC01DA9A2CA7A29A00B307D5 /* HomeView.swift in Sources */,
 				AC6245502D0285DD00448A7E /* ReviewCard.swift in Sources */,
 				ACD6F4462CE6D69700DA16B2 /* FlashcardViewModel.swift in Sources */,
+				AC26E93A2D03875700EFB302 /* SearchView.swift in Sources */,
 				AC01DAA62CA7C80300B307D5 /* Bookmark.swift in Sources */,
+				AC26E93C2D03890A00EFB302 /* TodoCardView.swift in Sources */,
 				ACFA40A62CF0D46C00E05223 /* CompanyView.swift in Sources */,
 				AC6137252C93A6CD0040A617 /* bluehire_frontendApp.swift in Sources */,
 			);
