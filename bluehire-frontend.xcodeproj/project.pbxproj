@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		931C6FEB2D028E8000CE5DAD /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C6FEA2D028E8000CE5DAD /* Flashcard.swift */; };
 		AC01DA9A2CA7A29A00B307D5 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA992CA7A29300B307D5 /* HomePage.swift */; };
 		AC01DA9D2CA7A32900B307D5 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA9C2CA7A32900B307D5 /* BookmarkView.swift */; };
 		AC01DAA02CA7BFE800B307D5 /* BottomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA9F2CA7BFE800B307D5 /* BottomNavBar.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		931C6FEA2D028E8000CE5DAD /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
 		AC01DA992CA7A29300B307D5 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		AC01DA9C2CA7A32900B307D5 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
 		AC01DA9F2CA7BFE800B307D5 /* BottomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavBar.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		AC4CF8662C93B2F3005BA5E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				931C6FEA2D028E8000CE5DAD /* Flashcard.swift */,
 				AC01DAA52CA7C80300B307D5 /* Bookmark.swift */,
 				ACFA40A72CF0D5CF00E05223 /* Review.swift */,
 			);
@@ -327,6 +330,7 @@
 				AC6137272C93A6CD0040A617 /* RootView.swift in Sources */,
 				ACD6F4442CE6D60300DA16B2 /* FlashcardView.swift in Sources */,
 				AC01DAA22CA7C7E000B307D5 /* BookmarkViewModel.swift in Sources */,
+				931C6FEB2D028E8000CE5DAD /* Flashcard.swift in Sources */,
 				AC01DA9D2CA7A32900B307D5 /* BookmarkView.swift in Sources */,
 				AC01DAA02CA7BFE800B307D5 /* BottomNavBar.swift in Sources */,
 				AC01DA9A2CA7A29A00B307D5 /* HomePage.swift in Sources */,
