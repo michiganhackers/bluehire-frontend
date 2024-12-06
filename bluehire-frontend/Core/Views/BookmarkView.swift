@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CompanyTrackerView: View {
+struct BookmarkView: View {
     let primaryColor = Color("AppPrimaryColor")
 
     @StateObject private var vm = CompanyViewModel()
@@ -102,5 +102,5 @@ struct CompanyTrackerView: View {
 
 
 #Preview {
-    CompanyTrackerView()
+    BookmarkView()
 }

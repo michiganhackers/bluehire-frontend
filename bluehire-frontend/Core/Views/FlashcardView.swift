@@ -20,9 +20,14 @@ struct FlashcardView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Text("Streak")
-                    .font(.title)
-                    .padding()
+                HStack {
+                    Spacer()
+                    Image("Flame")
+                    Text("Day 1")
+
+                }
+                .font(.title)
+                .padding()
                 
                 Spacer()
                 
@@ -34,10 +39,13 @@ struct FlashcardView: View {
                 .id(refreshCards)
                 
                 Spacer()
+                
                 Button("Refresh") {
                     refreshCards.toggle()
                 }
                 .buttonStyle(.borderedProminent)
+                .padding()
+                
                 BottomNavBar()
             }
         }
@@ -57,7 +65,7 @@ struct Card: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .frame(width: 320, height: 420)
+                .frame(width: 330, height: 550)
                 .cornerRadius(25)
                 .foregroundColor(rectangleColor)
             VStack {
@@ -69,7 +77,7 @@ struct Card: View {
                     .foregroundColor(.white)
             }
             .padding()
-            .frame(width: 320, height: 420)
+            .frame(width: 330, height: 550)
             
             // Display the tick only when the background is orange
             if showTick {
@@ -96,9 +104,11 @@ struct Card: View {
         )
         // OnTap gesture used to flip card
         .onTapGesture {
-            withAnimation(.easeInOut(duration: 0.2)) {
-                rectangleColor = .orange
-                showTick = true
+            if !isFlipped {
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    rectangleColor = .orange
+                    showTick = true
+                }
             }
             
             // Flip card after flashing orange
