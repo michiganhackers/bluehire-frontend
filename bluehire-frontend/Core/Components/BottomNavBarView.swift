@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BottomNavBar: View {
+struct BottomNavBarView: View {
     let primaryColor = Color("AppPrimaryColor")
     let navigationIcons = [
         "house",
@@ -42,5 +42,5 @@ struct BottomNavBar: View {
 }
 
 #Preview {
-    BottomNavBar()
+    BottomNavBarView()
 }
