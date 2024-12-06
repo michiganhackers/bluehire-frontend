@@ -12,6 +12,8 @@ struct FlashcardView: View {
     ]
     @State private var refreshCards = false
     
+    @StateObject private var vm = FlashcardViewModel()
+    
     var body: some View {
         ZStack {
             Image("BackgroundImage")
@@ -23,7 +25,7 @@ struct FlashcardView: View {
                 HStack {
                     Spacer()
                     Image("Flame")
-                    Text("Day 1")
+                    Text("Day \(vm.flashcard_info.streak)")
 
                 }
                 .font(.title)
@@ -32,8 +34,8 @@ struct FlashcardView: View {
                 Spacer()
                 
                 ZStack {
-                    ForEach(questions, id: \.self) { question in
-                        Card(question: question)
+                    ForEach(vm.flashcard_info.flashcards, id: \.id) { flashcard in
+                        Card(flashcard: flashcard)
                     }
                 }
                 .id(refreshCards)
@@ -51,7 +53,7 @@ struct FlashcardView: View {
 }
 
 struct Card: View {
-    var question: String
+    var flashcard: Flashcard
     // Used for dragging card
     @State private var offset = CGSize.zero
     
@@ -67,11 +69,11 @@ struct Card: View {
                 .cornerRadius(25)
                 .foregroundColor(rectangleColor)
             VStack {
-                Text(isFlipped ? "Solution" : question)
+                Text(isFlipped ? "Solution" : flashcard.title)
                     .font(.largeTitle)
                     .foregroundColor(.white)
                     .bold()
-                Text(isFlipped ? "Problem Solution goes here" : "Problem description goes here." )
+                Text(isFlipped ? flashcard.solution : flashcard.description )
                     .foregroundColor(.white)
             }
             .padding()

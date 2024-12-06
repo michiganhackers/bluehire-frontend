@@ -16,8 +16,8 @@ class CompanyViewModel: ObservableObject {
     
     init() {
         Task {
-//            await fetchCompanies()
-            await fetchDummyData()
+            await fetchCompanies()
+//            await fetchDummyData()
         }
     }
     func fetchCompanies() async {
