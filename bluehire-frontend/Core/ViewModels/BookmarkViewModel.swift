@@ -16,8 +16,8 @@ class CompanyViewModel: ObservableObject {
     
     init() {
         Task {
-            await fetchCompanies()
-            //await fetchDummyData()
+//            await fetchCompanies()
+            await fetchDummyData()
         }
     }
     func fetchCompanies() async {
@@ -71,7 +71,7 @@ class CompanyViewModel: ObservableObject {
         
         // Simulate network delay
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            //self.companies = Company.dummyData
+            self.companies = Company.dummyData
             self.isLoading = false
         }
     }

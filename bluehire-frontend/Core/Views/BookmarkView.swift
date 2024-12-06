@@ -37,12 +37,12 @@ struct BookmarkView: View {
                     
                     Spacer()
                     index
-                    BottomNavBar()
+                    BottomNavBarView()
                 }
             }
         }
     }
-    
+
     // MARK: - Components
     var header: some View {
         VStack {

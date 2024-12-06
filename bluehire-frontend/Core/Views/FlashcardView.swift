@@ -46,7 +46,7 @@ struct FlashcardView: View {
                 .buttonStyle(.borderedProminent)
                 .padding()
                 
-                BottomNavBar()
+                BottomNavBarView()
             }
         }
     }
@@ -114,7 +114,8 @@ struct Card: View {
             // Flip card after flashing orange
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 withAnimation(.easeInOut(duration: 0.2)) {
-                    rectangleColor = .black
+                    rectangleColor = isFlipped ? .black : Color(red: 0.2, green: 0.2, blue: 0.2)
+//                    rectangleColor = .black
                     showTick = false
                 }
                 withAnimation(.spring(duration: 0.5)) {

@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		931C6FEB2D028E8000CE5DAD /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C6FEA2D028E8000CE5DAD /* Flashcard.swift */; };
-		AC01DA9A2CA7A29A00B307D5 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA992CA7A29300B307D5 /* HomePage.swift */; };
+		AC01DA9A2CA7A29A00B307D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA992CA7A29300B307D5 /* HomeView.swift */; };
 		AC01DA9D2CA7A32900B307D5 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA9C2CA7A32900B307D5 /* BookmarkView.swift */; };
-		AC01DAA02CA7BFE800B307D5 /* BottomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA9F2CA7BFE800B307D5 /* BottomNavBar.swift */; };
+		AC01DAA02CA7BFE800B307D5 /* BottomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA9F2CA7BFE800B307D5 /* BottomNavBarView.swift */; };
 		AC01DAA22CA7C7E000B307D5 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DAA12CA7C7E000B307D5 /* BookmarkViewModel.swift */; };
 		AC01DAA62CA7C80300B307D5 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DAA52CA7C80300B307D5 /* Bookmark.swift */; };
 		AC6137252C93A6CD0040A617 /* bluehire_frontendApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6137242C93A6CD0040A617 /* bluehire_frontendApp.swift */; };
@@ -20,10 +19,14 @@
 		AC6137362C93A6CF0040A617 /* bluehire_frontendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6137352C93A6CF0040A617 /* bluehire_frontendTests.swift */; };
 		AC6137402C93A6CF0040A617 /* bluehire_frontendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61373F2C93A6CF0040A617 /* bluehire_frontendUITests.swift */; };
 		AC6137422C93A6CF0040A617 /* bluehire_frontendUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6137412C93A6CF0040A617 /* bluehire_frontendUITestsLaunchTests.swift */; };
+		AC62454A2D02801300448A7E /* ReviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6245492D02801300448A7E /* ReviewCardView.swift */; };
+		AC62454C2D0280F900448A7E /* IcCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62454B2D0280F900448A7E /* IcCardView.swift */; };
+		AC62454E2D02814700448A7E /* lcCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62454D2D02814700448A7E /* lcCard.swift */; };
+		AC6245502D0285DD00448A7E /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62454F2D0285DD00448A7E /* ReviewCard.swift */; };
+		AC6245522D02D57900448A7E /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6245512D02D57900448A7E /* Flashcard.swift */; };
 		ACD6F4442CE6D60300DA16B2 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */; };
 		ACD6F4462CE6D69700DA16B2 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD6F4452CE6D69700DA16B2 /* FlashcardViewModel.swift */; };
 		ACFA40A62CF0D46C00E05223 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA40A52CF0D46C00E05223 /* CompanyView.swift */; };
-		ACFA40A82CF0D5CF00E05223 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA40A72CF0D5CF00E05223 /* Review.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		931C6FEA2D028E8000CE5DAD /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
-		AC01DA992CA7A29300B307D5 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		AC01DA992CA7A29300B307D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AC01DA9C2CA7A32900B307D5 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
-		AC01DA9F2CA7BFE800B307D5 /* BottomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavBar.swift; sourceTree = "<group>"; };
+		AC01DA9F2CA7BFE800B307D5 /* BottomNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavBarView.swift; sourceTree = "<group>"; };
 		AC01DAA12CA7C7E000B307D5 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
 		AC01DAA52CA7C80300B307D5 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		AC6137212C93A6CD0040A617 /* bluehire-frontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bluehire-frontend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,10 +62,14 @@
 		AC61373B2C93A6CF0040A617 /* bluehire-frontendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bluehire-frontendUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC61373F2C93A6CF0040A617 /* bluehire_frontendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluehire_frontendUITests.swift; sourceTree = "<group>"; };
 		AC6137412C93A6CF0040A617 /* bluehire_frontendUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluehire_frontendUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC6245492D02801300448A7E /* ReviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardView.swift; sourceTree = "<group>"; };
+		AC62454B2D0280F900448A7E /* IcCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcCardView.swift; sourceTree = "<group>"; };
+		AC62454D2D02814700448A7E /* lcCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lcCard.swift; sourceTree = "<group>"; };
+		AC62454F2D0285DD00448A7E /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
+		AC6245512D02D57900448A7E /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
 		ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		ACD6F4452CE6D69700DA16B2 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		ACFA40A52CF0D46C00E05223 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
-		ACFA40A72CF0D5CF00E05223 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +111,7 @@
 		AC4CF8652C93B2E8005BA5E4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AC01DA992CA7A29300B307D5 /* HomePage.swift */,
+				AC01DA992CA7A29300B307D5 /* HomeView.swift */,
 				AC01DA9C2CA7A32900B307D5 /* BookmarkView.swift */,
 				ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */,
 				ACFA40A52CF0D46C00E05223 /* CompanyView.swift */,
@@ -116,9 +122,10 @@
 		AC4CF8662C93B2F3005BA5E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				931C6FEA2D028E8000CE5DAD /* Flashcard.swift */,
 				AC01DAA52CA7C80300B307D5 /* Bookmark.swift */,
-				ACFA40A72CF0D5CF00E05223 /* Review.swift */,
+				AC62454D2D02814700448A7E /* lcCard.swift */,
+				AC62454F2D0285DD00448A7E /* ReviewCard.swift */,
+				AC6245512D02D57900448A7E /* Flashcard.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,7 +199,9 @@
 		ACD6F43E2CE6D4A300DA16B2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				AC01DA9F2CA7BFE800B307D5 /* BottomNavBar.swift */,
+				AC01DA9F2CA7BFE800B307D5 /* BottomNavBarView.swift */,
+				AC6245492D02801300448A7E /* ReviewCardView.swift */,
+				AC62454B2D0280F900448A7E /* IcCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -327,14 +336,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC62454C2D0280F900448A7E /* IcCardView.swift in Sources */,
 				AC6137272C93A6CD0040A617 /* RootView.swift in Sources */,
 				ACD6F4442CE6D60300DA16B2 /* FlashcardView.swift in Sources */,
 				AC01DAA22CA7C7E000B307D5 /* BookmarkViewModel.swift in Sources */,
-				931C6FEB2D028E8000CE5DAD /* Flashcard.swift in Sources */,
+				AC62454E2D02814700448A7E /* lcCard.swift in Sources */,
 				AC01DA9D2CA7A32900B307D5 /* BookmarkView.swift in Sources */,
-				AC01DAA02CA7BFE800B307D5 /* BottomNavBar.swift in Sources */,
-				AC01DA9A2CA7A29A00B307D5 /* HomePage.swift in Sources */,
-				ACFA40A82CF0D5CF00E05223 /* Review.swift in Sources */,
+				AC6245522D02D57900448A7E /* Flashcard.swift in Sources */,
+				AC62454A2D02801300448A7E /* ReviewCardView.swift in Sources */,
+				AC01DAA02CA7BFE800B307D5 /* BottomNavBarView.swift in Sources */,
+				AC01DA9A2CA7A29A00B307D5 /* HomeView.swift in Sources */,
+				AC6245502D0285DD00448A7E /* ReviewCard.swift in Sources */,
 				ACD6F4462CE6D69700DA16B2 /* FlashcardViewModel.swift in Sources */,
 				AC01DAA62CA7C80300B307D5 /* Bookmark.swift in Sources */,
 				ACFA40A62CF0D46C00E05223 /* CompanyView.swift in Sources */,
