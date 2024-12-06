@@ -4,8 +4,7 @@
 //
 //  Created by Tiong Tze Yi on 28/09/2024.
 //
-
-//DOCUMENTATION: https://dev.to/robycigar/how-to-fetch-data-in-swiftui-2d1d
+//  DOCUMENTATION: https://dev.to/robycigar/how-to-fetch-data-in-swiftui-2d1d
 
 
 import Foundation
@@ -21,12 +20,12 @@ class CompanyViewModel: ObservableObject {
             await fetchDummyData()
         }
     }
-    
+
     func fetchCompanies() async {
         isLoading = true
         errorMessage = nil
         
-        guard let url = URL(string: "https://localhost:5000/api/company") else {
+        guard let url = URL(string: "http://localhost:5000/api/company/<user_id>") else {
             errorMessage = "Invalid URL"
             isLoading = false
             return

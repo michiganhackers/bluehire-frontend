@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CompanyTrackerView: View {
+struct BookmarkView: View {
     let primaryColor = Color("AppPrimaryColor")
 
     @StateObject private var vm = CompanyViewModel()
@@ -67,9 +67,8 @@ struct CompanyTrackerView: View {
         }
         .searchable(text: $searchText, prompt: "Search")
         .frame(maxHeight: 500)
-
     }
-        
+
     var filter: some View {
         HStack {
             Text("All |")
@@ -103,5 +102,5 @@ struct CompanyTrackerView: View {
 
 
 #Preview {
-    CompanyTrackerView()
+    BookmarkView()
 }
