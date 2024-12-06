@@ -23,6 +23,7 @@
 		AC62454C2D0280F900448A7E /* IcCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62454B2D0280F900448A7E /* IcCardView.swift */; };
 		AC62454E2D02814700448A7E /* lcCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62454D2D02814700448A7E /* lcCard.swift */; };
 		AC6245502D0285DD00448A7E /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62454F2D0285DD00448A7E /* ReviewCard.swift */; };
+		AC6245522D02D57900448A7E /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6245512D02D57900448A7E /* Flashcard.swift */; };
 		ACD6F4442CE6D60300DA16B2 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */; };
 		ACD6F4462CE6D69700DA16B2 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD6F4452CE6D69700DA16B2 /* FlashcardViewModel.swift */; };
 		ACFA40A62CF0D46C00E05223 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA40A52CF0D46C00E05223 /* CompanyView.swift */; };
@@ -65,6 +66,7 @@
 		AC62454B2D0280F900448A7E /* IcCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcCardView.swift; sourceTree = "<group>"; };
 		AC62454D2D02814700448A7E /* lcCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lcCard.swift; sourceTree = "<group>"; };
 		AC62454F2D0285DD00448A7E /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
+		AC6245512D02D57900448A7E /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
 		ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		ACD6F4452CE6D69700DA16B2 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		ACFA40A52CF0D46C00E05223 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
@@ -120,10 +122,10 @@
 		AC4CF8662C93B2F3005BA5E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				931C6FEA2D028E8000CE5DAD /* Flashcard.swift */,
 				AC01DAA52CA7C80300B307D5 /* Bookmark.swift */,
 				AC62454D2D02814700448A7E /* lcCard.swift */,
 				AC62454F2D0285DD00448A7E /* ReviewCard.swift */,
+				AC6245512D02D57900448A7E /* Flashcard.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -340,6 +342,7 @@
 				AC01DAA22CA7C7E000B307D5 /* BookmarkViewModel.swift in Sources */,
 				AC62454E2D02814700448A7E /* lcCard.swift in Sources */,
 				AC01DA9D2CA7A32900B307D5 /* BookmarkView.swift in Sources */,
+				AC6245522D02D57900448A7E /* Flashcard.swift in Sources */,
 				AC62454A2D02801300448A7E /* ReviewCardView.swift in Sources */,
 				AC01DAA02CA7BFE800B307D5 /* BottomNavBarView.swift in Sources */,
 				AC01DA9A2CA7A29A00B307D5 /* HomeView.swift in Sources */,

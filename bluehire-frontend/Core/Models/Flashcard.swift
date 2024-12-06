@@ -18,5 +18,3 @@ struct Flashcard: Identifiable, Codable {
     var description: String
     var solution: String
 }
-
-
