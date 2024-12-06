@@ -45,8 +45,6 @@ struct FlashcardView: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .padding()
-                
-                BottomNavBarView()
             }
         }
     }

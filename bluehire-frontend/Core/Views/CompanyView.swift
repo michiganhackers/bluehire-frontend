@@ -52,10 +52,9 @@ struct CompanyView: View {
                 ReviewCardView(title: reviewData.title,
                                subtitle: reviewData.subtitle,
                                text: reviewData.text,
-                               cards: reviewData.cards)
+                               lcCards: reviewData.lcCards)
             }
         }
-        
     }
     
 }

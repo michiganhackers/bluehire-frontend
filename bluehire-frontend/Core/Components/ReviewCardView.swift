@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct ReviewCardView: View {
-    
     var title : String
     var subtitle : String
     var text : String
-    var cards : [lcCard]
+    var lcCards : [lcCard]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -49,13 +48,13 @@ struct ReviewCardView: View {
             // TODO: insert see more action
             
             HStack() {
-                ForEach(cards.prefix(3), id: \.text) { card in
-                    lcCardView(lcCard: card)
+                ForEach(lcCards.prefix(3), id: \.text) { lcCard in
+                    lcCardView(lcCard: lcCard)
                 }
                 
                 // Render an additional card if there are more than 3 items
-                if cards.count > 3 {
-                    lcCardView(lcCard: lcCard(text: "+\(cards.count - 3)", difficulty: "none"))
+                if lcCards.count > 3 {
+                    lcCardView(lcCard: lcCard(text: "+\(lcCards.count - 3)", difficulty: "none"))
                 }
             }
             .padding()
@@ -69,8 +68,11 @@ struct ReviewCardView: View {
 }
 
 #Preview {
-    ReviewCardView(title: "Software Engineering Intern",
-             subtitle: "OA @ Microsoft",
-             text: "This is a description of the card content. You can add more information here to give details.This is a description of the card content. You can add more information here to give details.This is a description of the card content. You can add more information here to give details.This is a description of the card ",
-             cards: lcCard.dummyData)
+    var dummyData = ReviewCard.dummyData[0]
+    
+    ReviewCardView(title: dummyData.title,
+                   subtitle: dummyData.subtitle,
+                   text: dummyData.text,
+                   lcCards: dummyData.lcCards
+                )
 }

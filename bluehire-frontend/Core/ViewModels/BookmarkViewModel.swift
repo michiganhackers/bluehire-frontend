@@ -70,7 +70,7 @@ class CompanyViewModel: ObservableObject {
         isLoading = true
         
         // Simulate network delay
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.companies = Company.dummyData
             self.isLoading = false
         }

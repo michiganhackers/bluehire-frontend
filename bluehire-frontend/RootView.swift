@@ -10,8 +10,7 @@ import SwiftUI
 struct RootView: View {
     var body: some View {
         VStack {
-            BookmarkView()
-//            HomeView()
+            CoreView()
         }
         .padding()
     }
@@ -20,3 +19,4 @@ struct RootView: View {
 #Preview {
     RootView()
 }
+
