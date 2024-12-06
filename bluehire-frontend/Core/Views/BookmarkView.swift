@@ -56,9 +56,9 @@ struct BookmarkView: View {
             List {
                 ForEach(searchResults) { company in
                     NavigationLink {
-                        Text(company.name)
+                        Text(company.company_name)
                     } label: {
-                        Text(company.name)
+                        Text(company.company_name)
                     }
                 }
             }
@@ -95,7 +95,7 @@ struct BookmarkView: View {
         if searchText.isEmpty {
             return vm.companies
         } else {
-            return vm.companies.filter { $0.name.contains(searchText) }
+            return vm.companies.filter { $0.company_name.contains(searchText) }
         }
     }
 }

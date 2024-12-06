@@ -16,16 +16,15 @@ class CompanyViewModel: ObservableObject {
     
     init() {
         Task {
-            // await fetchCompanies()
-            await fetchDummyData()
+            await fetchCompanies()
+            //await fetchDummyData()
         }
     }
-
     func fetchCompanies() async {
         isLoading = true
         errorMessage = nil
         
-        guard let url = URL(string: "http://localhost:5000/api/company/<user_id>") else {
+        guard let url = URL(string: "http://127.0.0.1:5000/bookmark/") else {
             errorMessage = "Invalid URL"
             isLoading = false
             return
@@ -43,9 +42,19 @@ class CompanyViewModel: ObservableObject {
                 isLoading = false
                 return
             }
+            let dateFormatter: DateFormatter = {
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+                formatter.timeZone = TimeZone(abbreviation: "UTC")
+                return formatter
+            }()
+
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .formatted(dateFormatter)
             
             // MARK: - Retrieve and process api data
-            self.companies = try JSONDecoder().decode([Company].self, from: data)
+            self.companies = try decoder.decode([Company].self, from: data)
+            //self.companies = try JSONDecoder().decode([Company].self, from: data)
             
         } catch {
             errorMessage = "Failed to fetch data: \(error.localizedDescription)"
@@ -62,7 +71,7 @@ class CompanyViewModel: ObservableObject {
         
         // Simulate network delay
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.companies = Company.dummyData
+            //self.companies = Company.dummyData
             self.isLoading = false
         }
     }

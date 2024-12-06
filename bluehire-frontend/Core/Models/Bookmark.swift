@@ -7,16 +7,17 @@
 
 import Foundation
 
-struct Company: Identifiable, Codable {
+struct Company: Identifiable, Decodable {
     var id: Int
-    var name: String
-    var date: Date
-    
+    var company_name: String
+    var time_stamp: Date
     // MARK: - dummy data
-    static let dummyData: [Company] = [
-        Company(id: 1, name: "Microsoft", date: Date()),
-        Company(id: 2, name: "Netflix", date: Date()),
-        Company(id: 3, name: "Amazon", date: Date()),
-        Company(id: 4, name: "Databricks", date: Date())
-    ]
+    //static let dummyData: [Company] = [
+    //    Company(id: 1, name: "Microsoft", date: Date()),
+    //    Company(id: 2, name: "Netflix", date: Date()),
+    //    Company(id: 3, name: "Amazon", date: Date()),
+    //    Company(id: 4, name: "Databricks", date: Date())
+    //]
 }
+
+
