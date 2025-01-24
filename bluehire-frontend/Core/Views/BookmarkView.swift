@@ -17,11 +17,9 @@ struct BookmarkView: View {
     var body: some View {
         ZStack {
             if vm.isLoading {
-                Text("Loading...")
-                    .font(.headline)
+                LoadingView()
             } else if let errorMessage = vm.errorMessage {
-                Text(errorMessage)
-                    .foregroundColor(.red)
+                ErrorMessageView(message: errorMessage)
             } else if !vm.companies.isEmpty {
                 // body view
                 Image("BackgroundImage")
@@ -34,7 +32,6 @@ struct BookmarkView: View {
                         .background(Color.black)
                     filter
                     searchBar
-                    
                     index
                 }
             }
