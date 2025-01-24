@@ -27,6 +27,9 @@
 		AC62454E2D02814700448A7E /* lcCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62454D2D02814700448A7E /* lcCard.swift */; };
 		AC6245502D0285DD00448A7E /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62454F2D0285DD00448A7E /* ReviewCard.swift */; };
 		AC6245522D02D57900448A7E /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6245512D02D57900448A7E /* Flashcard.swift */; };
+		ACC3A5F82D431B4A0011AE71 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC3A5F72D431B4A0011AE71 /* WebService.swift */; };
+		ACC3A5FA2D4325360011AE71 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC3A5F92D4325360011AE71 /* LoadingView.swift */; };
+		ACC3A5FE2D4326570011AE71 /* ErrorMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC3A5FD2D4326570011AE71 /* ErrorMessageView.swift */; };
 		ACD6F4442CE6D60300DA16B2 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */; };
 		ACD6F4462CE6D69700DA16B2 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD6F4452CE6D69700DA16B2 /* FlashcardViewModel.swift */; };
 		ACFA40A62CF0D46C00E05223 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA40A52CF0D46C00E05223 /* CompanyView.swift */; };
@@ -73,6 +76,9 @@
 		AC62454D2D02814700448A7E /* lcCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lcCard.swift; sourceTree = "<group>"; };
 		AC62454F2D0285DD00448A7E /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
 		AC6245512D02D57900448A7E /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
+		ACC3A5F72D431B4A0011AE71 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		ACC3A5F92D4325360011AE71 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		ACC3A5FD2D4326570011AE71 /* ErrorMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageView.swift; sourceTree = "<group>"; };
 		ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		ACD6F4452CE6D69700DA16B2 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		ACFA40A52CF0D46C00E05223 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 		AC6137232C93A6CD0040A617 /* bluehire-frontend */ = {
 			isa = PBXGroup;
 			children = (
+				ACC3A5F42D431B0D0011AE71 /* Services */,
 				AC0BC74A2C96317B005E936D /* Core */,
 				AC6137242C93A6CD0040A617 /* bluehire_frontendApp.swift */,
 				AC6137262C93A6CD0040A617 /* RootView.swift */,
@@ -205,12 +212,22 @@
 			path = "bluehire-frontendUITests";
 			sourceTree = "<group>";
 		};
+		ACC3A5F42D431B0D0011AE71 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ACC3A5F72D431B4A0011AE71 /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		ACD6F43E2CE6D4A300DA16B2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				AC6245492D02801300448A7E /* ReviewCardView.swift */,
 				AC62454B2D0280F900448A7E /* IcCardView.swift */,
 				AC26E93B2D03890A00EFB302 /* TodoCardView.swift */,
+				ACC3A5F92D4325360011AE71 /* LoadingView.swift */,
+				ACC3A5FD2D4326570011AE71 /* ErrorMessageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -356,11 +373,14 @@
 				AC62454A2D02801300448A7E /* ReviewCardView.swift in Sources */,
 				AC01DAA02CA7BFE800B307D5 /* CoreView.swift in Sources */,
 				AC01DA9A2CA7A29A00B307D5 /* HomeView.swift in Sources */,
+				ACC3A5F82D431B4A0011AE71 /* WebService.swift in Sources */,
 				AC6245502D0285DD00448A7E /* ReviewCard.swift in Sources */,
+				ACC3A5FA2D4325360011AE71 /* LoadingView.swift in Sources */,
 				ACD6F4462CE6D69700DA16B2 /* FlashcardViewModel.swift in Sources */,
 				AC26E93A2D03875700EFB302 /* SearchView.swift in Sources */,
 				AC01DAA62CA7C80300B307D5 /* Bookmark.swift in Sources */,
 				AC26E93C2D03890A00EFB302 /* TodoCardView.swift in Sources */,
+				ACC3A5FE2D4326570011AE71 /* ErrorMessageView.swift in Sources */,
 				ACFA40A62CF0D46C00E05223 /* CompanyView.swift in Sources */,
 				AC6137252C93A6CD0040A617 /* bluehire_frontendApp.swift in Sources */,
 			);

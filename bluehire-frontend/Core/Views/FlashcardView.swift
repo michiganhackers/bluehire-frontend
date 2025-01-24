@@ -16,37 +16,43 @@ struct FlashcardView: View {
     
     var body: some View {
         ZStack {
-            Image("BackgroundImage")
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                HStack {
-                    Spacer()
-                    Image("Flame")
-                    Text("Day \(vm.flashcard_info.streak)")
+            if vm.isLoading {
+                LoadingView()
+            } else if let errorMessage = vm.errorMessage {
+                ErrorMessageView(message: errorMessage)
+            } else {
+                Image("BackgroundImage")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack {
+                    HStack {
+                        Spacer()
+                        Image("Flame")
+                        Text("Day \(vm.flashcard_info.streak)")
 
-                }
-                .font(.title)
-                .padding()
-                
-                Spacer()
-                
-                ZStack {
-                    ForEach(vm.flashcard_info.flashcards, id: \.id) { flashcard in
-                        Card(flashcard: flashcard)
                     }
+                    .font(.title)
+                    .padding()
+                    
+                    Spacer()
+                    
+                    ZStack {
+                        ForEach(vm.flashcard_info.flashcards, id: \.id) { flashcard in
+                            Card(flashcard: flashcard)
+                        }
+                    }
+                    .id(refreshCards)
+                    
+                    Spacer()
+                    
+                    Button("Refresh") {
+                        refreshCards.toggle()
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .padding()
                 }
-                .id(refreshCards)
-                
-                Spacer()
-                
-                Button("Refresh") {
-                    refreshCards.toggle()
-                }
-                .buttonStyle(.borderedProminent)
-                .padding()
             }
         }
     }
@@ -87,7 +93,6 @@ struct Card: View {
                     .frame(width: 50, height: 50)
                     .foregroundColor(.white)
             }
-            
         }
         .offset(x: offset.width, y: offset.height)
         // Gesture used for drag/swiping card
@@ -115,6 +120,8 @@ struct Card: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 withAnimation(.easeInOut(duration: 0.2)) {
                     rectangleColor = isFlipped ? .black : Color(red: 0.2, green: 0.2, blue: 0.2)
+                    rectangleColor = isFlipped ? .black : Color(red: 0.0, green: 0.6, blue: 0.0)
+
 //                    rectangleColor = .black
                     showTick = false
                 }
