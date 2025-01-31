@@ -17,7 +17,6 @@
 - **Auth/**
   - Contains any code that deals with authentication
 
-
 ## CI/CD Workflow
 
 ### 1. Trello Task
@@ -48,3 +47,6 @@
 
 ### 2. Reusable Components
 - For example, if Navbar is used across multiple pages, extract it in a separate file and use any existing one
+
+## Workflow
+<img src="workflow.png" alt="Workflow" width="500">
