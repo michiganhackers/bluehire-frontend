@@ -9,6 +9,8 @@ import SwiftUI
 import GoogleSignIn
 
 struct LogInView: View {
+    @EnvironmentObject var userViewModel: UserViewModel
+    
     var body: some View {
         VStack {
             Text("Log In Screen")
@@ -29,6 +31,9 @@ struct LogInView: View {
                     // inspect error
                     return
                 }
+                // self.user = User.init(name: result.user.profile?.name ?? "")
+                userViewModel.login(username: result.user.profile?.name ?? "")
+                
                 print(result.user.profile?.name)
                 print(result.user.profile?.email)
                 print(result.user.profile?.imageURL(withDimension: 200))
@@ -37,9 +42,9 @@ struct LogInView: View {
     }
 }
 
-#Preview {
-    LogInView()
-}
+// #Preview {
+//     LogInView()
+// }
 
 //
 func getRootViewController() -> UIViewController? {

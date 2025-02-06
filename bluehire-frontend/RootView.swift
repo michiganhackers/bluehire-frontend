@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct RootView: View {
+    @StateObject private var userViewModel = UserViewModel(user: nil)
+    
     var body: some View {
-        VStack {
+        if userViewModel.user != nil {
             CoreView()
+                .environmentObject(userViewModel)
+        } else {
+            LogInView()
+                .environmentObject(userViewModel)
         }
-        .padding()
+    
     }
 }
-
-#Preview {
-    RootView()
-}
-

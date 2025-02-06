@@ -9,24 +9,31 @@ import SwiftUI
 struct HomeView: View {
     var reviewsData: [ReviewCard] = ReviewCard.dummyData
     
+    @EnvironmentObject var userViewModel: UserViewModel
     @State var searchText: String = ""
     
     var body: some View {
-        VStack (alignment: .leading) {
-            header
-            
-            Text("To-do's")
-                .bold()
-                .padding(.leading, 15)
-            
-            TodoCardView()
-                .padding(.leading, 15)
-            
-            Text("What's New?")
-                .padding(.leading, 15)
-                .bold()
-            
-            reviews
+        ScrollView(showsIndicators: false) {
+            VStack (alignment: .leading) {
+                header
+                
+                Text("Hello, \(String(describing: userViewModel.user?.name ?? ""))")
+                    .bold()
+                    .padding(.leading, 15)
+                
+                Text("To-do's")
+                    .bold()
+                    .padding(.leading, 15)
+                
+                TodoCardView()
+                    .padding(.leading, 15)
+                
+                Text("What's New?")
+                    .padding(.leading, 15)
+                    .bold()
+                
+                reviews
+            }
         }
     }
     
@@ -38,7 +45,7 @@ struct HomeView: View {
                 .bold()
             Spacer()
             Button(action: {
-                print("Hello World")
+                print("Search button")
             }) {
                 Image(systemName: "magnifyingglass")
                     .resizable()
