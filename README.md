@@ -4,6 +4,7 @@
 - **Figma** - https://www.figma.com/design/0cPBF7Tfkflib4gLk8n33q/iOS-24%2F25-Figma-Design-Board?node-id=94-80&t=25d8HzingcunsyLk-1
 - **Backend** - https://github.com/michiganhackers/bluehire-backend
 - **Documentation** - https://docs.google.com/document/d/1xmsIfHM3SBfpUo6uGEF5_gOhPBcxgC6W1ytqsXmZTo4/edit?usp=sharing
+- **HybridRecommender** - https://github.com/tzeyi/HybridRecommender
 
 # Overview
 - **Core/**
