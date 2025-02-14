@@ -198,6 +198,7 @@
 				403C7ADF2D5ED4A000FF7F06 /* ProfilePageView.swift */,
 				221176B92D4C593B007641A4 /* SelectionView.swift */,
 				403C7ADF2D5ED4A000FF7F06 /* ProfilePageView.swift */,
+				221176B92D4C593B007641A4 /* SelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
