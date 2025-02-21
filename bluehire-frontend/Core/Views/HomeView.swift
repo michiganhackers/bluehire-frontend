@@ -9,17 +9,12 @@ import SwiftUI
 struct HomeView: View {
     var reviewsData: [ReviewCard] = ReviewCard.dummyData
     
-    @EnvironmentObject var userViewModel: UserViewModel
     @State var searchText: String = ""
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack (alignment: .leading) {
                 header
-                
-                Text("Hello, \(String(describing: userViewModel.user?.name ?? ""))")
-                    .bold()
-                    .padding(.leading, 15)
                 
                 Text("To-do's")
                     .bold()

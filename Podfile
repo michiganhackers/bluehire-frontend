@@ -8,6 +8,7 @@ target 'bluehire-frontend' do
   # Pods for bluehire-frontend
   pod 'GoogleSignIn'
   pod 'GoogleSignInSwiftSupport'
+  pod 'KeychainSwift', '~> 24.0'
 
   target 'bluehire-frontendTests' do
     inherit! :search_paths

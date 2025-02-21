@@ -7,21 +7,20 @@
 
 import SwiftUI
 import GoogleSignIn
+import KeychainSwift
 
 struct LogInView: View {
-    @EnvironmentObject var userViewModel: UserViewModel
     
     var body: some View {
         VStack {
             Text("Log In Screen")
-            Button(action: {handleSignInButton()}, label: {
+            Button(action: {handleGoogleSignInButton()}, label: {
                 Text("Sign In With Google")
             })
         }
     }
     
-    func handleSignInButton() {
-        print("Sign in with Google selected")
+    func handleGoogleSignInButton() {
         
         if let rootViewController = getRootViewController() {
             GIDSignIn.sharedInstance.signIn(
@@ -31,12 +30,11 @@ struct LogInView: View {
                     // inspect error
                     return
                 }
-                // self.user = User.init(name: result.user.profile?.name ?? "")
-                userViewModel.login(username: result.user.profile?.name ?? "")
+                let keychain = KeychainSwift()
+                if !keychain.set(result.user.idToken?.tokenString ?? "", forKey: "auth_token") {
+                    // inspect error
+                }
                 
-                print(result.user.profile?.name)
-                print(result.user.profile?.email)
-                print(result.user.profile?.imageURL(withDimension: 200))
             }
         }
     }

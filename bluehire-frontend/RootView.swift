@@ -6,17 +6,17 @@
 //
 
 import SwiftUI
+import KeychainSwift
 
 struct RootView: View {
-    @StateObject private var userViewModel = UserViewModel(user: nil)
+    let keychain = KeychainSwift()
     
     var body: some View {
-        if userViewModel.user != nil {
+        let auth_id = keychain.get("auth_token") ?? ""
+        if (auth_id != "") {
             CoreView()
-                .environmentObject(userViewModel)
         } else {
             LogInView()
-                .environmentObject(userViewModel)
         }
     
     }

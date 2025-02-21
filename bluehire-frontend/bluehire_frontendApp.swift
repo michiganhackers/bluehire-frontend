@@ -10,13 +10,11 @@ import SwiftUI
 
 @main
 struct bluehire_frontendApp: App {
-    @StateObject private var userViewModel = UserViewModel(user: User(name: "John Doe"))
     
     var body: some Scene {
         WindowGroup {
             NavigationStack {
                 RootView()
-                    .environmentObject(userViewModel)
                     .onOpenURL(perform: { url in
                         GIDSignIn.sharedInstance.handle(url)
                     })
