@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 
+
 struct TodoCardListView: View {
     
     let todoData: [TodoCard] = TodoCard.dummyData
@@ -16,7 +17,14 @@ struct TodoCardListView: View {
     
     // body
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Daily Selections")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            Text("Pick a set to start")
+                .font(.title3)
+                .padding(.bottom, 20)
+            
             ForEach(todoData) { todo in
                 DisplayFashcard(todo: todo)
                     .padding(.bottom, 15)
