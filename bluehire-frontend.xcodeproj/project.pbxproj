@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		403C7AE02D5ED4A000FF7F06 /* Profile_Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C7ADF2D5ED4A000FF7F06 /* Profile_Page.swift */; };
 		AC01DA9A2CA7A29A00B307D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA992CA7A29300B307D5 /* HomeView.swift */; };
 		AC01DA9D2CA7A32900B307D5 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA9C2CA7A32900B307D5 /* BookmarkView.swift */; };
 		AC01DAA02CA7BFE800B307D5 /* CoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01DA9F2CA7BFE800B307D5 /* CoreView.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		403C7ADF2D5ED4A000FF7F06 /* Profile_Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_Page.swift; sourceTree = "<group>"; };
 		AC01DA992CA7A29300B307D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AC01DA9C2CA7A32900B307D5 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
 		AC01DA9F2CA7BFE800B307D5 /* CoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreView.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				AC0BC74A2C96317B005E936D /* Core */,
 				AC6137242C93A6CD0040A617 /* bluehire_frontendApp.swift */,
 				AC6137262C93A6CD0040A617 /* RootView.swift */,
+				403C7ADF2D5ED4A000FF7F06 /* Profile_Page.swift */,
 				AC6137282C93A6CF0040A617 /* Assets.xcassets */,
 				AC61372A2C93A6CF0040A617 /* Preview Content */,
 			);
@@ -364,6 +367,7 @@
 			files = (
 				AC62454C2D0280F900448A7E /* IcCardView.swift in Sources */,
 				AC6137272C93A6CD0040A617 /* RootView.swift in Sources */,
+				403C7AE02D5ED4A000FF7F06 /* Profile_Page.swift in Sources */,
 				ACD6F4442CE6D60300DA16B2 /* FlashcardView.swift in Sources */,
 				AC26E93E2D038A7500EFB302 /* TodoCard.swift in Sources */,
 				AC01DAA22CA7C7E000B307D5 /* BookmarkViewModel.swift in Sources */,
