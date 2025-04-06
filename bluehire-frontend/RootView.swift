@@ -6,18 +6,22 @@
 //
 
 import SwiftUI
-import KeychainSwift
 
 struct RootView: View {
-    let keychain = KeychainSwift()
+    // Environment Object is used to allow child to access defined ViewModels.
+    // This means that CoreView and LoginView don't need to create a new instance
+    @StateObject private var loginViewModel = LoginViewModel()
     
     var body: some View {
-        let auth_id = keychain.get("auth_token") ?? ""
-        if (auth_id != "") {
+        if (loginViewModel.isLoggedIn) {
             CoreView()
+                .environmentObject(loginViewModel)
+            Button("Logout") {
+                loginViewModel.logout()
+            }
         } else {
             LogInView()
+                .environmentObject(loginViewModel)
         }
-    
     }
 }

@@ -10,6 +10,7 @@ import GoogleSignIn
 import KeychainSwift
 
 struct LogInView: View {
+    @EnvironmentObject var LoginViewModel: LoginViewModel
     
     var body: some View {
         VStack {
@@ -21,30 +22,24 @@ struct LogInView: View {
     }
     
     func handleGoogleSignInButton() {
-        
         if let rootViewController = getRootViewController() {
             GIDSignIn.sharedInstance.signIn(
                 withPresenting: rootViewController
             ) {result, error in
                 guard let result else {
                     // inspect error
+                    print("Google Sign-In failed: \(error?.localizedDescription ?? "Unknown error")")
                     return
                 }
-                let keychain = KeychainSwift()
-                if !keychain.set(result.user.idToken?.tokenString ?? "", forKey: "auth_token") {
-                    // inspect error
-                }
                 
+                let token = result.user.idToken?.tokenString ?? ""
+                LoginViewModel.login(with: token)
             }
         }
     }
 }
 
-// #Preview {
-//     LogInView()
-// }
 
-//
 func getRootViewController() -> UIViewController? {
     guard let scene = UIApplication.shared.connectedScenes.first as?
             UIWindowScene,
@@ -67,3 +62,7 @@ private func getVisibleViewController(from vc: UIViewController) -> UIViewContro
      return vc
 }
 
+
+#Preview {
+    LogInView()
+}
