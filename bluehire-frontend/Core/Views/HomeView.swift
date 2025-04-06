@@ -12,21 +12,23 @@ struct HomeView: View {
     @State var searchText: String = ""
     
     var body: some View {
-        VStack (alignment: .leading) {
-            header
-            
-            Text("To-do's")
-                .bold()
-                .padding(.leading, 15)
-            
-            TodoCardView()
-                .padding(.leading, 15)
-            
-            Text("What's New?")
-                .padding(.leading, 15)
-                .bold()
-            
-            reviews
+        ScrollView(showsIndicators: false) {
+            VStack (alignment: .leading) {
+                header
+                
+                Text("To-do's")
+                    .bold()
+                    .padding(.leading, 15)
+                
+                TodoCardView()
+                    .padding(.leading, 15)
+                
+                Text("What's New?")
+                    .padding(.leading, 15)
+                    .bold()
+                
+                reviews
+            }
         }
     }
     
@@ -38,7 +40,7 @@ struct HomeView: View {
                 .bold()
             Spacer()
             Button(action: {
-                print("Hello World")
+                print("Search button")
             }) {
                 Image(systemName: "magnifyingglass")
                     .resizable()
