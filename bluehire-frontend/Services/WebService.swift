@@ -68,8 +68,5 @@ class WebService {
             return try JSONDecoder().decode(Flashcard_Info.self, from: data)
         }
     }
-        
-    
-    
-    
+
 }

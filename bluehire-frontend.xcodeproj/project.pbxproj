@@ -27,7 +27,6 @@
 		AC62454E2D02814700448A7E /* lcCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62454D2D02814700448A7E /* lcCard.swift */; };
 		AC6245502D0285DD00448A7E /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62454F2D0285DD00448A7E /* ReviewCard.swift */; };
 		AC6245522D02D57900448A7E /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6245512D02D57900448A7E /* Flashcard.swift */; };
-		AC80CAD52D680E5D00D19454 /* testPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80CAD42D680E5D00D19454 /* testPost.swift */; };
 		ACC3A5F82D431B4A0011AE71 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC3A5F72D431B4A0011AE71 /* WebService.swift */; };
 		ACC3A5FA2D4325360011AE71 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC3A5F92D4325360011AE71 /* LoadingView.swift */; };
 		ACC3A5FE2D4326570011AE71 /* ErrorMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC3A5FD2D4326570011AE71 /* ErrorMessageView.swift */; };
@@ -77,7 +76,6 @@
 		AC62454D2D02814700448A7E /* lcCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lcCard.swift; sourceTree = "<group>"; };
 		AC62454F2D0285DD00448A7E /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
 		AC6245512D02D57900448A7E /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
-		AC80CAD42D680E5D00D19454 /* testPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPost.swift; sourceTree = "<group>"; };
 		ACC3A5F72D431B4A0011AE71 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		ACC3A5F92D4325360011AE71 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		ACC3A5FD2D4326570011AE71 /* ErrorMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageView.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */,
 				ACFA40A52CF0D46C00E05223 /* CompanyView.swift */,
 				AC26E9392D03875700EFB302 /* SearchView.swift */,
-				AC80CAD42D680E5D00D19454 /* testPost.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -368,7 +365,6 @@
 				AC62454C2D0280F900448A7E /* IcCardView.swift in Sources */,
 				AC6137272C93A6CD0040A617 /* RootView.swift in Sources */,
 				ACD6F4442CE6D60300DA16B2 /* FlashcardView.swift in Sources */,
-				AC80CAD52D680E5D00D19454 /* testPost.swift in Sources */,
 				AC26E93E2D038A7500EFB302 /* TodoCard.swift in Sources */,
 				AC01DAA22CA7C7E000B307D5 /* BookmarkViewModel.swift in Sources */,
 				AC62454E2D02814700448A7E /* lcCard.swift in Sources */,
