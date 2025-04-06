@@ -283,6 +283,8 @@
 				ACC3A5F72D431B4A0011AE71 /* WebService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
 		ACCA630E2DA32EFC0082E988 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
