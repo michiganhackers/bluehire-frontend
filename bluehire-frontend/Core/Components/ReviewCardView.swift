@@ -68,9 +68,9 @@ struct ReviewCardView: View {
 }
 
 #Preview {
-    var dummyData = ReviewCard.dummyData[0]
+    let dummyData = ReviewCard.dummyData[0]
     
-    ReviewCardView(title: dummyData.title,
+    return ReviewCardView(title: dummyData.title,
                    subtitle: dummyData.subtitle,
                    text: dummyData.text,
                    lcCards: dummyData.lcCards

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CoreView: View {
+    
     private let navigationTabs: [(icon: String, view: AnyView)] = [
         ("house", AnyView(HomeView())),
         ("magnifyingglass", AnyView(SearchView())),
