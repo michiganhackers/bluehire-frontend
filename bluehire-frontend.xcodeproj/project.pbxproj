@@ -189,6 +189,7 @@
 				ACD6F4432CE6D60300DA16B2 /* FlashcardView.swift */,
 				ACFA40A52CF0D46C00E05223 /* CompanyView.swift */,
 				AC26E9392D03875700EFB302 /* SearchView.swift */,
+				221176B92D4C593B007641A4 /* SelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
