@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Profile_Page: View {
+struct ProfilePageView: View {
     @State var mobPhoneNumber = ""
     @State var mobEmail = ""
     @State var streak = "3"
@@ -264,5 +264,5 @@ struct Profile_Page: View {
 }
 
 #Preview {
-    Profile_Page()
+    ProfilePageView()
 }
